@@ -1,5 +1,5 @@
 # Project Name
-Memory Card Game by Jessy
+Blog By Jessy
 
 ## Contributing
 1. Fork it!
@@ -10,7 +10,9 @@ Memory Card Game by Jessy
 
 ## Restriction
 
-Nous devons créer un jeux de mémoire en cartes avec javascript et le DOM
+We have to create a blog with possibility of commentary with PHP/SQL
+
+For connecte you'r bdd you have to rename configexample.php to config.php
 
 ## Creators
 
