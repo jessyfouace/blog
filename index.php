@@ -3,7 +3,7 @@
 <html class="no-js" lang="fr">
 
 <head>
-  <title></title>
+  <title>Accueil Blog</title>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,8 +24,9 @@
   </div>
 
   <?php
+  // Select the blog
    $reponse = $bdd->query('SELECT * FROM blogcommentaire ORDER BY id DESC LIMIT 5');
-
+   // see all blog with the foreach (don't need to fetch because only 1 with this id)
     echo '<div class="col-6 mx-auto">';
      foreach ($reponse as $key => $value) {
        echo "<a class='col-6 mx-auto' href='viewcom.php?blog=" . $value['id'] . "'>
