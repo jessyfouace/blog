@@ -3,7 +3,7 @@
 <html class="no-js" lang="fr">
 
 <head>
-  <title>Accueil Blog</title>
+  <title></title>
   <meta charset="utf-8">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -15,43 +15,15 @@
 </head>
 
 <body>
-  <form class="col-12 text-center pb-2 pt-2" action="addblog.php" method="post">
-    <input type="submit" name="addblog" value="Ajouter page blog">
+  <form class="" action="verif.php" method="post">
+    <label for="titletext">Titre:</label>
+    <input id="titletext" type="text" name="title" value=""><br>
+    <label for="nickname">Pseudo:</label>
+    <input id="nickname" type="text" name="pseudo" value=""><br>
+    <label for="addmss">Message:</label>
+    <textarea id="addmss" name="message" rows="2" cols="47"></textarea>
+    <input type="submit" name="" value="Envoyer">
   </form>
-
-  <div class="col-6 mx-auto">
-    <p>Les 5 derniers Billets du blog:</p>
-  </div>
-
-  <?php
-  // Select the blog
-   $reponse = $bdd->query('SELECT * FROM blogcommentaire ORDER BY id DESC LIMIT 5');
-   // see all blog with the foreach (don't need to fetch because only 1 with this id)
-    echo '<div class="col-6 mx-auto">';
-     foreach ($reponse as $key => $value) {
-       echo "<a class='col-6 mx-auto' href='viewcom.php?blog=" . $value['id'] . "'>
-       <div class='col-12 mx-auto blogcreate mt-2'>
-         <div class='col-12 titlecom'>
-           <h1>" . $value['title'] . "</h1>
-           <p>test</p>
-         </div>
-         <div class='col-12 row'>
-           <div class='col-12 name m-0'>
-             <h2>" . $value['pseudo'] . "</h2>
-           </div>
-           <div class='col-12 pl-4 pt-2'>
-             <p>" . $value['message'] . "</p>
-           </div>
-         </div>
-       </div></a>";
-     }
-     echo '</div>';
-
-     $reponse->closeCursor();
-
-  ?>
-
-
 
 
   <script src="js/vendor/modernizr-3.6.0.min.js"></script>

@@ -97,13 +97,31 @@ textarea {
    Author's custom styles
    ========================================================================== */
 
+  .titlecom{
+    border-bottom: 1px dashed #d5d5d5;
+  }
 
+  .blogcreate{
+    border: 1px solid #d5d5d5;
+  }
 
+  .name{
+    border-bottom: 1px solid #d5d5d5;
+  }
 
+  body{
+    color: black;
+  }
 
+  a{
+    color: black;
+    text-decoration: none;
+  }
 
-
-
+  a:hover{
+    color: black;
+    text-decoration: none;
+  }
 
 
 
